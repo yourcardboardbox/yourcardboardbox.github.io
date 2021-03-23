@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    --mobiledirection: row;
+    --font-size: 1rem;
+}
+
+@media only screen and (max-width: 1366px) {
+    * {
+        margin: 0;
+        padding: 0;
+        --mobiledirection: column;
+        --font-size: 2rem;
+    }
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: var(--mobiledirection);
+}
+
+.container h1 { 
+    margin: 3rem;
+}
+
+.title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: var(--font-size);
+}
