@@ -1,0 +1,74 @@
+* {
+
+    --content-width: 60%;
+}
+
+@media only screen and (max-width: 1366px) {
+   * {
+    --content-width: 90%;
+   } 
+}
+
+@font-face {
+    font-family: "Computer Modern Serif";
+    src: url(/assets/fonts/cmunrm-webfont.woff);
+}
+
+@font-face {
+    font-family: "Computer Modern Italic";
+    src: url(/assets/fonts/cmunsl-webfont.woff);
+}
+
+@font-face {
+    font-family: "Computer Modern Italic-Bold";
+    src: url(/assets/fonts/cmunbl-webfont.woff);
+} 
+
+@font-face {
+    font-family: "Computer Modern Bold";
+    src: url(/assets/fonts/cmunbx-webfont.woff);
+} 
+
+.container {
+    width: 100vw;
+    height: auto;
+
+    background-image: none;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    height: auto;
+}
+
+.content{
+    width: var(--content-width);
+    padding-top: 2rem;
+    padding-bottom: 12rem;
+    font-family: "Computer Modern Serif";
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: auto;
+}
+
+.content a {
+    color: black;
+}
+
+.content h1 {
+    font-family: "Computer Modern Bold";
+    font-size: 2.75rem;
+}
+
+.content h2 {
+    font-family: "Computer Modern Italic";
+    font-size: 1.6rem;
+    text-decoration: underline;
+}
+
+.date-contex {
+    font-family: "Computer Modern Italic";
+    font-size: 1.25rem;
+    padding-bottom: 1rem;
+}
