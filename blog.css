@@ -1,11 +1,13 @@
 * {
 
     --content-width: 60%;
+    --social-list-size: 1.75rem;
 }
 
 @media only screen and (max-width: 1366px) {
    * {
     --content-width: 90%;
+    --social-list-size: 4rem;
    } 
 }
 
@@ -42,33 +44,76 @@
     height: auto;
 }
 
+.container .menu ul li a {
+    text-decoration: none;
+    color: #000000;
+    margin: 2rem;
+
+    font-family: "Computer Modern Bold";
+    font-size: var(--menu-item-size);
+}
+
+
+
+.headline {
+    width: var(--content-width);
+    height: auto;
+    margin: auto;
+
+    padding-top: 2.5rem;
+}
+
+.headline h1 {
+    font-family: "Computer Modern Bold";
+    font-size: 2.5rem;
+}
+
+.headline a {
+    height: 100rem;
+}
+
+.headline ul {
+    padding-left: 0.25rem;
+}
+
+.social-list li {
+    max-width: var(--social-list-size);
+}
+
+.date-contex {
+    font-family: "Computer Modern Italic";
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    text-indent: 1rem;
+}
+
 .content{
     width: var(--content-width);
-    padding-top: 2rem;
     padding-bottom: 12rem;
     font-family: "Computer Modern Serif";
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
     margin: auto;
 }
 
 .content a {
-    color: black;
+    color: #30dbcd;
+    text-underline-offset: 0.25rem;
+    text-decoration-thickness: 0.125rem;
 }
 
-.content h1 {
-    font-family: "Computer Modern Bold";
-    font-size: 2.75rem;
+.content p {
+    text-indent: 3rem;
+    padding-top: 0.5rem;
+
 }
+
+
 
 .content h2 {
     font-family: "Computer Modern Italic";
     font-size: 1.6rem;
+    padding-top: 2rem;
     text-decoration: underline;
 }
 
-.date-contex {
-    font-family: "Computer Modern Italic";
-    font-size: 1.25rem;
-    padding-bottom: 1rem;
-}
