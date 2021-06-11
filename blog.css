@@ -2,6 +2,11 @@
 
     --content-width: 60%;
     --social-list-size: 1.75rem;
+
+    --font-family-standard: "Computer Modern Serif";
+    --font-family-italic: "Computer Modern Italic";
+    --font-family-ttalic-bold: "Computer Modern Italic Bold";
+    --font-family-bold: "Computer Modern Bold"   
 }
 
 @media only screen and (max-width: 1366px) {
@@ -64,8 +69,21 @@
 }
 
 .headline h1 {
-    font-family: "Computer Modern Bold";
+    font-family: var(--font-family-bold);
     font-size: 2.5rem;
+}
+
+.headline h3 {
+    font-family: var(--font-family-italic);
+    font-size: 0.8rem;
+    text-indent: 1rem;
+    color: rgb(83, 83, 83);
+    padding-bottom: 2rem;
+
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .headline a {
@@ -76,12 +94,22 @@
     padding-left: 0.25rem;
 }
 
+
+
+.title-img {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0.5rem;
+
+}
 .social-list li {
     max-width: var(--social-list-size);
 }
 
 .date-contex {
-    font-family: "Computer Modern Italic";
+    font-family: var(--font-family-italic);
     font-size: 1.2rem;
     padding-bottom: 1rem;
     text-indent: 1rem;
@@ -90,7 +118,7 @@
 .content{
     width: var(--content-width);
     padding-bottom: 12rem;
-    font-family: "Computer Modern Serif";
+    font-family: var(--font-family-standard);
     font-size: 1.3rem;
     font-weight: 500;
     margin: auto;
@@ -104,15 +132,26 @@
 
 .content p {
     text-indent: 3rem;
-    padding-top: 0.5rem;
+    padding-top: 0.25rem;
 
 }
 
+.content .code {
+    font-size: 1.2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    text-indent: 0rem;
 
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
 
 .content h2 {
-    font-family: "Computer Modern Italic";
-    font-size: 1.6rem;
+    font-family: var(--font-family-italic);
+    font-size: 1.7rem;
+    font-weight: 900;
     padding-top: 2rem;
     text-decoration: underline;
 }
