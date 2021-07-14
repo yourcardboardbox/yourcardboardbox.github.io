@@ -5,7 +5,7 @@
 
     --font-family-standard: "Computer Modern Serif";
     --font-family-italic: "Computer Modern Italic";
-    --font-family-ttalic-bold: "Computer Modern Italic Bold";
+    --font-family-italic-bold: "Computer Modern Italic Bold";
     --font-family-bold: "Computer Modern Bold"   
 }
 
@@ -36,6 +36,15 @@
     src: url(/assets/fonts/cmunbx-webfont.woff);
 } 
 
+body::-webkit-scrollbar {
+    width: 0.625rem;
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: rgba(190, 190, 190, 0.5);
+    border-radius: 1rem;
+  }
+  
 .container {
     width: 100vw;
     height: auto;
@@ -94,7 +103,12 @@
     padding-left: 0.25rem;
 }
 
-
+.headline video {
+    width: 80%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 .title-img {
     display: block;
@@ -134,6 +148,19 @@
     text-indent: 3rem;
     padding-top: 0.25rem;
 
+}
+
+p.italic {
+    font-family: var(--font-family-italic);
+}
+
+p.italic-bold {
+    font-family:  var(--font-family-italic);
+    font-weight: 700;
+}
+
+p.block {
+    text-indent: 0rem;
 }
 
 .content .code {
