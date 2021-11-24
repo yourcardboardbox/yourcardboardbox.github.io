@@ -16,6 +16,7 @@
     --homepage-background-image:  url(/assets/homepage/carboardboxhomeedit.png);
     --font-color: black;
     --underline-color: black;
+    --background-color: white;
     --dark-mode-icon: url(/assets/homepage/sun.png);
     --filter-value: none
 }
@@ -41,10 +42,10 @@
     --homepage-background-image:  url(/assets/homepage/carboardboxhomedarkedit.png);
     --font-color: white;
     --underline-color: white;
+    --background-color: black;
     --dark-mode-icon: url(/assets/homepage/moon.png);
     --filter-value: 100;
     font-size: 18px;
-    --top-offset: 7rem;
 
 }
 
@@ -73,6 +74,7 @@
 
 body {
     margin: 0rem;
+    background-color: var(--background-color);
 }
 
 .container {
