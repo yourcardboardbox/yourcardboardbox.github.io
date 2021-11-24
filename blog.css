@@ -1,18 +1,26 @@
-* {
+:root {
 
     --content-width: 60%;
     --social-list-size: 1.75rem;
 
+    --mobile-mutiplier: 1;
+
     --font-family-standard: "Computer Modern Serif";
     --font-family-italic: "Computer Modern Italic";
     --font-family-italic-bold: "Computer Modern Italic Bold";
-    --font-family-bold: "Computer Modern Bold"   
+    --font-family-bold: "Computer Modern Bold";   
+
+    --font-color: black;
+    --underline-color: black;
+    --background-color: white;
 }
 
 @media only screen and (max-width: 1366px) {
    * {
     --content-width: 90%;
     --social-list-size: 4rem;
+
+    --mobile-mutiplier: 1.25;
    } 
 }
 
@@ -36,6 +44,19 @@
     src: url(/assets/fonts/cmunbx-webfont.woff);
 } 
 
+ [data-theme="dark"] {
+
+    --font-color: white;
+    --underline-color: white;
+    --background-color: #202020;
+
+}
+
+
+body {
+    background-color: var(--background-color);
+}
+
 body::-webkit-scrollbar {
     width: 0.625rem;
   }
@@ -55,12 +76,11 @@ body::-webkit-scrollbar {
     background-repeat: no-repeat;
     background-size: auto;
 
-    height: auto;
 }
 
 .container .menu ul li a {
     text-decoration: none;
-    color: #000000;
+    color: var(--font-color);
     margin: 2rem;
 
     font-family: "Computer Modern Bold";
@@ -73,6 +93,8 @@ body::-webkit-scrollbar {
     width: var(--content-width);
     height: auto;
     margin: auto;
+
+    color: var(--font-color);
 
     padding-top: 2.5rem;
 }
@@ -97,10 +119,12 @@ body::-webkit-scrollbar {
 
 .headline a {
     height: 100rem;
+    color: var(--font-color);
 }
 
 .headline ul {
     padding-left: 0.25rem;
+    color: var(--font-color);
 }
 
 .headline video {
@@ -120,22 +144,33 @@ body::-webkit-scrollbar {
 }
 .social-list li {
     max-width: var(--social-list-size);
+    list-style-type: none;
+    color: var(--font-color);
+    filter: invert(var(--filter-value));
 }
 
 .date-contex {
     font-family: var(--font-family-italic);
-    font-size: 1.2rem;
+    font-size: calc(1.2rem*var(--mobile-mutiplier));
     padding-bottom: 1rem;
     text-indent: 1rem;
+
+    color: var(--font-color);
 }
 
 .content{
     width: var(--content-width);
-    padding-bottom: 12rem;
+
     font-family: var(--font-family-standard);
     font-size: 1.3rem;
     font-weight: 500;
-    margin: auto;
+
+    align-items: start;
+
+    color: var(--font-color);
+    height: auto;
+
+    padding-bottom: 10rem;
 }
 
 .content a {
@@ -146,21 +181,26 @@ body::-webkit-scrollbar {
 
 .content p {
     text-indent: 3rem;
-    padding-top: 0.25rem;
+    padding-top: 0.5rem;
+    margin: 0;
+    color: var(--font-color);
 
 }
 
 p.italic {
     font-family: var(--font-family-italic);
+    color: var(--font-color);
 }
 
 p.italic-bold {
     font-family:  var(--font-family-italic);
     font-weight: 700;
+    color: var(--font-color);
 }
 
 p.block {
     text-indent: 0rem;
+    color: var(--font-color);
 }
 
 .content .code {
@@ -171,6 +211,8 @@ p.block {
     width: 85%;
     text-indent: 0rem;
 
+    color: var(--font-color);
+
     padding-bottom: 1rem;
     padding-top: 1rem;
 }
@@ -179,7 +221,14 @@ p.block {
     font-family: var(--font-family-italic);
     font-size: 1.7rem;
     font-weight: 900;
-    padding-top: 2rem;
+
+    padding-top: 1.25rem;
+    margin: 0;
+    
     text-decoration: underline;
+
+
+    color: var(--font-color);
+    
 }
 

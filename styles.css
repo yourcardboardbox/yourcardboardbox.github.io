@@ -1,8 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
+:root {
+    margin: 0rem;
+    padding: 0rem;
     --mobiledirection: row;
     --font-size: 3rem;
+    --mobile-mutiplier: 1;
+
     --menu-item-size: 1.25rem;
 
     --main-menu-mobiled: 5vh;
@@ -10,50 +12,106 @@
 
     --hide-for-desktop: hidden;
     overflow-x: hidden;
+
+    --homepage-background-image:  url(/assets/homepage/carboardboxhomeedit.png);
+    --font-color: black;
+    --underline-color: black;
+    --dark-mode-icon: url(/assets/homepage/sun.png);
+    --filter-value: none
 }
 
+
 @media only screen and (max-width: 1366px) {
-    * {
-        margin: 0;
-        padding: 0;
+    :root {
+        margin: 0rem;
+        padding: 0rem;
         --mobiledirection: column;
         --font-size: 5rem;
+        --mobile-mutiplier: 1.25;
+
         --menu-item-size: 3rem;
 
         --hide-for-mobile: unset;
         --hide-for-desktop: hidden;
+        --top-offset: 7rem;
     }
+}
+
+[data-theme="dark"] {
+    --homepage-background-image:  url(/assets/homepage/carboardboxhomedarkedit.png);
+    --font-color: white;
+    --underline-color: white;
+    --dark-mode-icon: url(/assets/homepage/moon.png);
+    --filter-value: 100;
+    font-size: 18px;
+    --top-offset: 7rem;
+
+}
+
+.dark-mode-button {
+    position: absolute; 
+    right: 0; 
+    top: var(--top-offset);
+    padding: 1rem;
+}
+
+.dark-mode-button button {
+    background-color: Transparent;
+    border: none;
+    cursor:pointer;
+
+    width: calc(2rem*var(--mobile-mutiplier));
+    height: calc(2rem*var(--mobile-mutiplier));
+
+    background-image: var(--dark-mode-icon);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    filter: invert(var(--filter-value));
+}
+
+body {
+    margin: 0rem;
 }
 
 .container {
     width: 100vw;
     height: 100vh;
 
-    background-image: url(/assets/homepage/carboardboxhomeedit.png);
+    background-image: var(--homepage-background-image);
 
     background-position: center center;
     background-repeat: no-repeat;
     background-size: auto;
 
+
     height: 100vh;
 }
 
-.header-content {
+.content {
+    height: 100%;
 
-    height: var(--main-header-mobiled);
+    margin: auto;
 
-    text-align: center;
     display: flex;
+    text-align: left;
+
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+    
 
     flex-direction: column;
 }
 
+.header-content {
+    margin: auto;
+}
+
+
 .header-content a {
     font-size: 2rem;
-    font: O;
-    color: black;
+    color: var(--font-color);
     text-decoration: underline;
 
     font-family: 'Open Sans', sans-serif;
@@ -68,6 +126,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    padding-top: 1rem;
 }
 
 .container .menu ul {
@@ -83,7 +143,7 @@
 
 .container .menu ul li a {
     text-decoration: none;
-    color: #000000;
+    color: var(--font-color);
     margin: 2rem;
 
     font-family: 'Open Sans', sans-serif;
@@ -158,7 +218,7 @@
 
 .mobile-menu ul li a {
     text-decoration: none;
-    color: white;
+    color: var(--font-color);
     margin: 2rem 0 2rem 0;
 
     font-family: 'Open Sans', sans-serif;
@@ -167,7 +227,7 @@
 
 .header-content h1 { 
     margin: 0 0 5rem 0;
-    color: #000000;
+    color:var(--font-color);
 }
 
 .title {
@@ -189,7 +249,7 @@
 
 .blog-table .year p {
     text-decoration: none;
-    color: #000000;
+    color:var(--font-color);
     margin: 0.25rem;
 
     font-weight: 600;
@@ -199,7 +259,7 @@
 
 .blog-table .month p {
     text-decoration: none;
-    color: #000000;
+    color: var(--font-color);
     margin: 0.25rem;
 
     font-weight: 600;
@@ -216,7 +276,7 @@
 
 .blog-table ul li {
     text-decoration: none;
-    color: #000000;
+    color: var(--font-color);
     padding: 0 0 .25rem 0;
 
     font-family: 'Open Sans', sans-serif;
@@ -225,10 +285,13 @@
 
 .blog-table ul li a {
     text-decoration: none;
-    border-bottom: 1px solid black;
-    color: #000000;
+    border-bottom: 1px solid var(--underline-color);
+    color: var(--font-color);
     margin: .5rem;
 
     font-family: 'Open Sans', sans-serif;
     font-size: calc(var(--menu-item-size)*.85);
 }
+
+
+
