@@ -45,7 +45,7 @@
     --background-color: black;
     --dark-mode-icon: url(/assets/homepage/moon.png);
     --filter-value: 100;
-    font-size: 18px;
+    --font-size: 3rem;
 
 }
 
